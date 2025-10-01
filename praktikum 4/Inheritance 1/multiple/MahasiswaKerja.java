@@ -1,17 +1,7 @@
 package multiple;
 
-// Interface pertama
-interface Pegawai {
-    void bekerja();
-}
-
-// Interface kedua
-interface Pelajar {
-    void belajar();
-}
-
 // Kelas yang mengimplementasikan dua interface
-class MahasiswaKerja implements Pegawai, Pelajar {
+public class MahasiswaKerja implements Pegawai, Pelajar { // Dibuat 'public'
     private String nama;
 
     public MahasiswaKerja(String nama) {
@@ -31,13 +21,5 @@ class MahasiswaKerja implements Pegawai, Pelajar {
     public void jadwalHarian() {
         bekerja();
         belajar();
-    }
-}
-
-// Demo
-public class MultipleInheritanceDemo {
-    public static void main(String[] args) {
-        MahasiswaKerja john = new MahasiswaKerja("John");
-        john.jadwalHarian();
     }
 }
